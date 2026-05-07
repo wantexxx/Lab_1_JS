@@ -1,15 +1,136 @@
 <!DOCTYPE html>
-<html>
+<html lang="uk">
 <head>
-    <title>Лабораторна 1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Лабораторна №4</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --accent: #38bdf8;
+            --accent-hover: #0ea5e9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 40px;
+            background: var(--card-bg);
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(to right, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-dim);
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .status-box {
+            background: rgba(56, 189, 248, 0.1);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 30px;
+            border: 1px dashed var(--accent);
+            display: inline-block;
+        }
+
+        .instruction {
+            font-size: 0.9rem;
+            color: var(--accent);
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tasks-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .task-badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            color: var(--text-dim);
+            transition: all 0.3s ease;
+        }
+
+        .task-badge:hover {
+            background: var(--accent);
+            color: var(--bg-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-note {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        code {
+            background: #000;
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #f472b6;
+        }
+    </style>
 </head>
 <body>
 
-    <h1 id="myTitle">Тут буде привіт</h1>
+    <div class="container">
+        <h1>Лабораторна робота №4</h1>
+        <p class="subtitle">Робота з примітивами, масивами та об'єктами</p>
 
-    <button id="myBtn">Наведи на мене!</button>
+        <div class="status-box">
+            <span class="instruction">💡 Як перевірити результат:</span>
+            <p style="margin: 5px 0 0 0; font-size: 0.95rem;">
+                Натисніть <code>F12</code> або <code>Ctrl + Shift + I</code> та перейдіть у вкладку <b>Console</b>
+            </p>
+        </div>
+
+        <div class="tasks-grid">
+            <div class="task-badge">Завдання 1</div>
+            <div class="task-badge">Завдання 2</div>
+            <div class="task-badge">Завдання 3</div>
+            <div class="task-badge">Завдання 4</div>
+            <div class="task-badge">Завдання 5</div>
+            <div class="task-badge">Завдання 6</div>
+            <div class="task-badge">Завдання 7</div>
+        </div>
+
+        <div class="footer-note">
+            JavaScript файл <code>script.js</code> підключено автоматично.
+        </div>
+    </div>
 
     <script src="script.js"></script>
-    
 </body>
 </html>
