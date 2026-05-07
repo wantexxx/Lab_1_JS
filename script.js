@@ -1,3 +1,17 @@
+const btn = document.getElementById('myBtn');
+
+btn.addEventListener('click', () => {
+    console.clear(); 
+    console.log("%c--- ВИКОНАННЯ ЗАВДАНЬ (ВАРІАНТ 16) ---", "color: green; font-weight: bold;");
+
+    task1();
+    task2();
+    task3(3); // Приклад: Середа
+    task4(["яблуко", "кіт", "авто", "дім"]);
+    task5([10, 20, 30]);
+    task6(15, 5);
+});
+
 function task1() {
     let a = 0, b = 1, sum = 0, count = 0;
     while (count < 10) {
@@ -54,10 +68,3 @@ function task6(a, b) {
     const result = (a + b === 10 || Math.abs(a - b) === 10);
     console.log("Завдання 6 (Сума/різниця 10):", result);
 }
-
-task1();
-task2();
-task3(3); // приклад: Середа
-task4(["яблуко", "кіт", "авто", "дім"]);
-task5([10, 20, 30]);
-task6(15, 5);
