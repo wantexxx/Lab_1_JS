@@ -2,13 +2,83 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>Лабораторна робота №1 - Варіант 16</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Lab 8 | Professional UI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
 
-    <h1 id="main-title">Hello world!</h1>
+    <div class="app-container">
+        <header>
+            <h1>Лабораторна робота №8</h1>
+            <p>Advanced DOM Manipulation & Events</p>
+        </header>
 
-    <button id="action-button">Наведіть на мене для виклику функції</button>
+        <section class="card-section">
+            <div class="section-header">
+                <h2><i class="fas fa-brain"></i> 1. Memory Challenge</h2>
+                <div class="stats">
+                    <span>Спроби: <b id="moves">0</b></span>
+                    <span>Час: <b id="timer">00:00</b></span>
+                </div>
+            </div>
+            <div class="game-controls">
+                <button id="start-game" class="btn-primary">Почати нову гру</button>
+            </div>
+            <div id="game-board" class="memory-grid"></div>
+        </section>
+
+        <section class="card-section">
+            <h2><i class="fas fa-images"></i> 2. Смарт-Слайдер</h2>
+            <div class="slider-container" id="slider">
+                <div class="slides" id="slide-track">
+                    <div class="slide" style="background: linear-gradient(45deg, #6a11cb, #2575fc);"><h3>Digital Ocean</h3></div>
+                    <div class="slide" style="background: linear-gradient(45deg, #ff9a9e, #fad0c4);"><h3>Soft Pink</h3></div>
+                    <div class="slide" style="background: linear-gradient(45deg, #43e97b, #38f9d7);"><h3>Fresh Mint</h3></div>
+                </div>
+                <button class="nav-btn prev" id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+                <button class="nav-btn next" id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+                <div class="dots-container" id="dots"></div>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <h2><i class="fas fa-chalkboard-teacher"></i> 3. Project Kanban</h2>
+            <div class="kanban-container">
+                <div class="kanban-col" id="todo">
+                    <div class="col-title todo-line">Очікують</div>
+                    <div class="items-area">
+                        <div class="kanban-card" draggable="true" id="task-1">
+                            <h4>Рефакторинг JS</h4>
+                            <p>Оптимізувати чисті функції</p>
+                        </div>
+                        <div class="kanban-card" draggable="true" id="task-2">
+                            <h4>Дизайн UI</h4>
+                            <p>Додати Glassmorphism ефекти</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="kanban-col" id="progress">
+                    <div class="col-title progress-line">У роботі</div>
+                    <div class="items-area"></div>
+                </div>
+                <div class="kanban-col" id="done">
+                    <div class="col-title done-line">Виконано</div>
+                    <div class="items-area"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="card-section">
+            <div class="section-header">
+                <h2><i class="fas fa-edit"></i> 4. Інтерактивний Редактор</h2>
+                <button id="edit-mode-toggle" class="btn-edit">Редагувати</button>
+            </div>
+            <div class="edit-grid" id="card-grid">
+                </div>
+        </section>
+    </div>
 
     <script src="script.js"></script>
 </body>
